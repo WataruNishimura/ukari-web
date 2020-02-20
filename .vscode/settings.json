@@ -1,0 +1,16 @@
+{
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSaveTimeout": 2000,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.options": {
+    "configFile": "./.eslintrc.js"
+  },
+  "[vue]": {
+    "editor.formatOnSave": false
+  },
+  "prettier.endOfLine": "lf",
+  "files.eol": "\n",
+  "stylelint.autoFixOnSave": true
+}
