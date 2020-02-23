@@ -31,3 +31,4 @@ $ yarn generate
 - stylelint-plus
 - Vetur
 - Vue
+- ESLint
