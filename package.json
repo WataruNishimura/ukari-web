@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-env-vscode",
+  "name": "ukari-web",
   "version": "1.0.0",
   "description": "My badass Nuxt.js project",
   "author": "wataru.nishimura@nnkk.work",
@@ -24,9 +24,6 @@
     "@fullcalendar/core": "^4.4.0",
     "@fullcalendar/daygrid": "^4.4.0",
     "@fullcalendar/google-calendar": "^4.4.0",
-    "@fullcalendar/interaction": "^4.4.0",
-    "@fullcalendar/moment": "^4.4.0",
-    "@fullcalendar/timegrid": "^4.4.0",
     "@fullcalendar/vue": "^4.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "css-loader": "^3.4.2",
@@ -37,12 +34,7 @@
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
     "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^8.0.2",
-    "stylelint-config-prettier": "^8.0.1",
-    "stylelint-config-recess-order": "^2.0.3",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-prettier": "^1.1.2",
-    "stylelint-scss": "^3.14.2"
+    "sass-loader": "^8.0.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
@@ -56,6 +48,10 @@
     "husky": "^4.0.0",
     "lint-staged": "^10.0.0",
     "prettier": "^1.19.1",
-    "stylelint": "^12.0.0"
+    "stylelint": "^13.2.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recess-order": "^2.0.3",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.14.2"
   }
 }
