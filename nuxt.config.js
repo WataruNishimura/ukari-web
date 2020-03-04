@@ -50,7 +50,10 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
-    analyze: true
+    extend(config, ctx) {}
+    // analyze: true
+  },
+  generate: {
+    fallback: true
   }
 }
