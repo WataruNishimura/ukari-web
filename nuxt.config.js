@@ -14,9 +14,6 @@ export default {
   /*
    ** Headers of the page
    */
-  router: {
-    base: baseDir
-  },
   head: {
     htmlAttrs: {
       lang,

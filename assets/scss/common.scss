@@ -94,6 +94,10 @@ a {
     &--bold {
       font-weight: 800;
     }
+
+    &--author {
+      text-align: right;
+    }
   }
 
   &__link {
