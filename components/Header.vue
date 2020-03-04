@@ -28,8 +28,13 @@
 
   &__container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+
+  &__item {
+    margin: 2px 0;
   }
 
   &__item + &__item {
