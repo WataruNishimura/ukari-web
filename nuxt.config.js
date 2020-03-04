@@ -7,8 +7,6 @@ const baseHost = process.env.BASE_HOST || 'https://localhost:3000'
 const baseDir = process.env.BASE_DIR || '/'
 const baseUrl = baseHost + baseDir
 
-const ogpImage = baseUrl + 'img/ogp/'
-
 export default {
   mode: 'universal',
   /*
@@ -61,7 +59,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: `${ogpImage}ogp.jpg`
+        content: `https://ukari.hokkaido.jp/img/ogp/ogp.jpg`
       },
       {
         name: 'twitter:card',
