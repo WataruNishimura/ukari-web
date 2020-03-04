@@ -1,16 +1,26 @@
 <template lang="pug">
-  div.common-container
-    h1.page-title UKARI
-    h2.page-subtitle 創立者・代表挨拶
-    h2.page-subtitle 体制図
+  div.page.ukari
+    section.page__section
+      h1.page__title UKARI
+    section.page__section
+      h2.page__subtitle 体制図
+      img(:src="diagramImage").ukari-diagram
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      diagramImage: require('@/assets/img/diagram.jpeg')
+    }
+  }
+}
+</script>
+
 <style lang="scss">
-.common-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.ukari-diagram {
+  width: 90%;
+  object-fit: cover;
 }
 </style>
 

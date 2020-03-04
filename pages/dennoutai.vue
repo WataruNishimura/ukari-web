@@ -1,12 +1,8 @@
 <template lang="pug">
-  div.common-container
-    h1.page-title 電脳隊
-    h2.page-subtitle 参加申込フォーム
+  .page.dennoutai
+    section.page__section
+      h1.page__title 電脳隊
+    section.page__section
+      h2.page__subtitle 参加申込フォーム
+      <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd2_I_gNvLHYHSGFO2wBHXotbRzlVifxTQvvnCiSvpign8qJQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
 </template>
-
-<style lang="scss" scoped>
-.page-title,
-.page-subtitle {
-  color: #b9b9b9;
-}
-</style>

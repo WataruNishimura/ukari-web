@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  div.container
     common-header
     nuxt
     common-footer
@@ -18,18 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  background: #1c1b1b;
-}
-
-a {
-  text-decoration: none;
+.container {
+  position: relative;
 }
 </style>

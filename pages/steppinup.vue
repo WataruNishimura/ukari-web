@@ -1,10 +1,13 @@
 <template lang="pug">
-  div.common-container
-    h1.page-title Steppin'Up
+  .page.steppinup
+    section.page__section
+      h1.page__title Steppin'Up
+    section.page__section
+      p.steppinup__ready-text Now Loading...
 </template>
 
-<style lang="scss" scoped>
-.page-title {
-  color: #fe644d;
+<style lang="scss">
+.steppinup__ready-text {
+  font-size: 2rem;
 }
 </style>

@@ -1,13 +1,25 @@
 <template lang="pug">
-  div.common-container
-    h1.page-title U-LABO
-    h2.page-subtitle 利用方法・料金
-    
+  .page.labo
+    section.page__section
+      h1.page__title U-LABO
+    section.page__section
+      h2.page__subtitle クラウドファンディング挑戦中
+      p 現在、U-LABOに開設に向けて、クラウドファンディングに挑戦中です！
+      a( href="https://camp-fire.jp/projects/view/240557" target="_blank" rel="noopener noreferrer").page__link 詳細はこちらから
+    section.page__section
+      h2.page__subtitle 利用方法・料金
+      p 未定
+    section.page__section
+      h2.page__subtitle スケジュール
+      full-calendar(:calendarId="calendarId").schedule-calendar  
 </template>
 
-<style lang="scss" scoped>
-.page-title,
-.page-subtitle {
-  color: #119ee9;
+<script>
+export default {
+  data() {
+    return {
+      calendarId: 'ukari.salon@gmail.com'
+    }
+  }
 }
-</style>
+</script>
