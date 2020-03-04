@@ -28,10 +28,21 @@
 </template>
 
 <script>
+import Meta from '@/assets/mixins/meta'
+
 export default {
+  mixins: [Meta],
   data() {
     return {
-      calendarId: 'ukari.salon@gmail.com'
+      calendarId: 'ukari.salon@gmail.com',
+      meta: {
+        title: 'UKARI SALON',
+        description:
+          'UKARI SALONは学生の自己実現へのハードルを下げ、挑戦者へのベースキャンプとして日本有数の環境を作るべく活動しています。',
+        type: 'article',
+        url: 'https://ukari.hokkaido.jp/salon',
+        image: 'https://ukari.hokkaido.jp/img/ogp/ogp_salon.jpg'
+      }
     }
   }
 }

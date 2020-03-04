@@ -15,10 +15,21 @@
 </template>
 
 <script>
+import Meta from '@/assets/mixins/meta'
+
 export default {
+  mixins: [Meta],
   data() {
     return {
-      calendarId: 'ukari.salon@gmail.com'
+      calendarId: 'ukari.salon@gmail.com',
+      meta: {
+        title: 'U-LABO',
+        description:
+          'U-LABOは「好奇心が交差する社会実験場」がコンセプトのUKARIが運営するコミュニティスペースです。',
+        type: 'article',
+        url: 'https://ukari.hokkaido.jp/labo',
+        image: 'https://ukari.hokkaido.jp/img/ogp/ogp_labo.jpg'
+      }
     }
   }
 }

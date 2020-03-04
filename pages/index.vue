@@ -13,6 +13,11 @@ export default {
     return {
       diagramImage: require('@/assets/img/diagram.jpeg')
     }
+  },
+  head() {
+    return {
+      title: 'トップページ'
+    }
   }
 }
 </script>
