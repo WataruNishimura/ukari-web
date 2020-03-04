@@ -3,12 +3,6 @@ const siteName = '学生団体UKARI'
 const siteDesc = '学生団体UKARI　公式ホームページ'
 const siteKeywords = 'UKARI,学生団体,学生団体UKARI,札幌,高校生'
 
-const baseHost = process.env.BASE_HOST || 'https://localhost:3000'
-const baseDir = process.env.BASE_DIR || '/'
-const baseUrl = baseHost + baseDir
-
-const ogpImage = baseUrl + 'img/ogp/'
-
 export default {
   mode: 'universal',
   /*
@@ -46,7 +40,7 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: baseUrl
+        content: 'https://ukari.hokkaido.jp/'
       },
       {
         hid: 'og:title',
@@ -61,7 +55,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: `${ogpImage}ogp.jpg`
+        content: `https://ukari.hokkaido.jp/img/ogp/ogp.jpg`
       },
       {
         name: 'twitter:card',
