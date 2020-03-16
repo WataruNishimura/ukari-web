@@ -1,7 +1,8 @@
 <template lang="pug">
   div.page.ukari
     section.page__section
-      h1.page__title UKARI SALON
+      h1.page__title 
+        img(src="/img/logos/UKARI-SALON_LOGO.svg" alt="UKARI SALON Logo")
     section.page__section
       h2.page__subtitle About UKARI SALON
       p.page__text #[span.page__text--bold 「札幌では自己実現が叶わないから、いつか上京してからやりたいことをしよう。]
@@ -24,7 +25,7 @@
       <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSeGTynIebZ4kesARtvysGke4Djlg01OoB6Fn75MFHNs7tGn5w/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
     section.page__section
       h2.page__subtitle スケジュール
-      full-calendar(:calendarId="calendarId").schedule-calendar
+      full-calendar(:calendarId="calendarId").schedule-calendar.schedule-calendar--salon
 </template>
 
 <script>
@@ -87,6 +88,18 @@ export default {
 
   @media screen and (max-width: 768px) {
     width: 90%;
+  }
+
+  &--salon {
+    .fc-content {
+      font-weight: 800;
+      color: $ukari-black-color;
+      background: $ukari-color;
+    }
+
+    .fc-event {
+      border-color: $ukari-color;
+    }
   }
 }
 </style>

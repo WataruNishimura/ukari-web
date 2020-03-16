@@ -1,7 +1,8 @@
 <template lang="pug">
   .page.dennoutai
     section.page__section
-      h1.page__title 電脳隊
+      h1.page__title
+        img(src="/img/logos/DENNOUAI_LOGO.svg", alt="Dennoutai Logo")
     section.page__section
       h2.page__subtitle 参加申込フォーム
       <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd2_I_gNvLHYHSGFO2wBHXotbRzlVifxTQvvnCiSvpign8qJQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>

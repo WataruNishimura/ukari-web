@@ -1,7 +1,8 @@
 <template lang="pug">
   .page.steppinup
     section.page__section
-      h1.page__title Steppin'Up
+      h1.page__title
+        img(src="/img/logos/SteppinUp_Logo.svg", alt="alt")
     section.page__section
       p.steppinup__ready-text Now Loading...
 </template>

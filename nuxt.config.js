@@ -91,7 +91,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/style-resources', 'nuxt-fontawesome'],
   styleResources: {
     scss: ['~/assets/scss/variable.scss']
   },
@@ -107,5 +107,8 @@ export default {
   },
   generate: {
     fallback: true
+  },
+  fontawesome: {
+    component: 'fa'
   }
 }

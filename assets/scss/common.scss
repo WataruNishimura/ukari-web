@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  color: $text-color;
+}
+
 
 .page {
   display: flex;
@@ -45,11 +49,17 @@ a {
   }
   
   &__title {
+    width: auto;
+    height: 60px;
     margin-bottom: 2rem;
-    font-size: 60px;
 
     @media screen and (max-width: 768px) {
-      font-size: 30px;
+      height: 30px;
+    }
+
+    img {
+      width: auto;
+      height: 100%;
     }
   }
 
@@ -114,6 +124,14 @@ a {
       content: '';
       border: solid .5px;
     }
+  }
+
+  &__button {
+    padding: 1rem;
+    margin: 2rem 0;
+    font-weight: 800;
+    border: solid .5px;
+    transition: 0.8s ease;
   }
 }
 

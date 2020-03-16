@@ -1,7 +1,8 @@
 <template lang="pug">
   div.page.ukari
     section.page__section
-      h1.page__title UKARI
+      h1.page__title
+        img(src="/img/logos/UKARI_LOGO.svg" alt="UKRAI Logo")
     section.page__section
       h2.page__subtitle 体制図
       img(:src="diagramImage").ukari-diagram
