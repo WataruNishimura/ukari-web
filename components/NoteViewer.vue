@@ -14,7 +14,7 @@
         img( v-if="post.thumb[0]" :src="post.thumb[0]" :alt="post.title[0]" )
         p.note-viewer__box__pub-date {{ getPubDate(post.pubDate[0]) }}
         p.note-viewer__box__title {{ post.title[0] }}
-        p.note-viewer__box__link もっと見る
+        p.note-viewer__box__link noteを読む
     .note-viewer__footer
 </template>
 
