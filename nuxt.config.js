@@ -91,7 +91,13 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/style-resources', 'nuxt-fontawesome'],
+  modules: [
+    '@nuxtjs/style-resources',
+    'nuxt-fontawesome',
+    ['@nuxtjs/moment', ['ja']],
+    '~/modules/api-bundle-json.js',
+    '@nuxtjs/axios'
+  ],
   styleResources: {
     scss: ['~/assets/scss/variable.scss']
   },
