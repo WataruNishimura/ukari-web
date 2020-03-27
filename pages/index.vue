@@ -21,41 +21,16 @@
           <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUKARI2018%2F&tabs=timeline&width=300&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="300" height="400" style="overflow:hidden;border:none" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
         .sns-group__box 
           h3.page__small-title note
-          note-viewer( :notes="notes" )
 </template>
 
 <script>
-import ps from 'xml2js'
-import NoteViewer from '@/components/NoteViewer'
+import diagramImage from '@/assets/img/diagram.jpeg'
 
 export default {
-  components: {
-    NoteViewer
-  },
-  async asyncData(context) {
-    const getThumnails = (data) => {
-      const thumbnails = data.match(/https(.|\s)*?(jpg|png|gif|jpeg)/gi)
-      return thumbnails !== null && thumbnails !== undefined
-        ? Object.values(thumbnails)
-        : false
-    }
-    const xml = await context.$axios.$get('https://note.com/ukarisalon/rss')
-    const json = {
-      items: []
-    }
-    ps.parseString(xml, (message, xmlres) => {
-      json.items = xmlres.rss.channel[0].item
-    })
-    json.items.forEach((data) => {
-      const thumb = getThumnails(data.description[0])
-      Object.assign(data, { thumb })
-    })
-    return { notes: json }
-  },
+  components: {},
   data() {
     return {
-      diagramImage: require('@/assets/img/diagram.jpeg'),
-      notes: null
+      diagramImage
     }
   },
   head() {
