@@ -6,7 +6,11 @@
     section.page__section
       h2.page__subtitle About UKARI
     section.page__section
-      h2.page__subtitle 代表挨拶
+      h2.page__subtitle 創設者挨拶
+      p.page__text 今から2年前、高校1年生の2月に学生団体UKARI を立ち上げました。当初の人数は5人、小さな交流イベントを行うサークルのような団体でした。
+      p.page__text それから2年経ち、多くの大人の方に応援をいただく中でUKARIは、70人を超えるメンバーと共に高校生向けのコミュニティスペースを運営し、数日にまたがる学生フェスを企画するような大きな団体になっていきました。
+      p.page__text UKARIの理念は「挑戦者のベースキャンプ」です。頑張りたい、頑張る、頑張った、頑張ってみたい人、それらが交差して作り出すコミュニティを、札幌に作っていって欲しいと願っています。
+      p.page__text--author UKARI 創設者 種市慎太郎
     section.page__section
       h2.page__subtitle 体制図
       img(:src="diagramImage").ukari-diagram
