@@ -5,6 +5,7 @@
         img(src="/img/logos/UKARI_LOGO.svg" alt="UKRAI Logo")
     section.page__section
       h2.page__subtitle About UKARI
+      p.page__text UKARIは「挑戦者のベースキャンプ」を理念とし、札幌を始めとして多くの高校生によって作りだされるコミュニティです。
     section.page__section
       h2.page__subtitle 創設者挨拶
       p.page__text 今から2年前、高校1年生の2月に学生団体UKARI を立ち上げました。当初の人数は5人、小さな交流イベントを行うサークルのような団体でした。
@@ -25,16 +26,27 @@
           <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUKARI2018%2F&tabs=timeline&width=300&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="300" height="400" style="overflow:hidden;border:none" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
         .sns-group__box 
           h3.page__small-title note
+          noteViewer(:notes="jsonData")
+
 </template>
 
 <script>
 import diagramImage from '@/assets/img/diagram.jpeg'
+import jsonData from '@/static/_nuxt/api/index.json'
+import noteViewer from '@/components/NoteViewer'
 
 export default {
-  components: {},
+  components: {
+    noteViewer
+  },
   data() {
     return {
       diagramImage
+    }
+  },
+  computed: {
+    jsonData() {
+      return jsonData[0].items[0]
     }
   },
   head() {

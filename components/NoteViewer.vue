@@ -6,12 +6,12 @@
       a( href="https://note.com/ukarisalon" ).note-viewer__header__link さらに見る
     .note-viewer__frame
       a(
-        v-for="(post, index) in notes.items"
+        v-for="(post, index) in notes"
         :key="index"
         :href="post.link[0]"
         target="__blank"
       ).note-viewer__box
-        img( v-if="post.thumb[0]" :src="post.thumb[0]" :alt="post.title[0]" )
+        img( v-if="post.thumb[0]" :src="post.thumb[0]" :alt="post.title[0]" ).note-viewer__box__img
         p.note-viewer__box__pub-date {{ getPubDate(post.pubDate[0]) }}
         p.note-viewer__box__title {{ post.title[0] }}
         p.note-viewer__box__link noteを読む
@@ -109,6 +109,7 @@ export default {
     &__title {
       margin-bottom: 10px;
       font-size: 0.8rem;
+      font-weight: bold;
       color: black;
     }
 
@@ -122,6 +123,11 @@ export default {
       font-size: 0.6rem;
       color: #42c9b4;
       text-decoration: underline;
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
     }
   }
 }

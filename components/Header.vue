@@ -32,15 +32,16 @@ export default {
   },
   methods: {
     toggleHeader() {
+      const html = document.getElementsByTagName('html')[0]
+      const body = document.getElementsByTagName('body')[0]
       if (window.innerWidth <= 768) {
         this.isHeaderActive
           ? (this.isHeaderActive = false)
           : (this.isHeaderActive = true)
+
+        html.classList.toggle('scroll-fixed')
+        body.classList.toggle('scroll-fixed')
       }
-      const html = document.getElementsByTagName('html')[0]
-      const body = document.getElementsByTagName('body')[0]
-      html.classList.toggle('scroll-fixed')
-      body.classList.toggle('scroll-fixed')
     }
   }
 }

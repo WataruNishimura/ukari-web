@@ -4,8 +4,9 @@ import axios from 'axios'
 import fse from 'fs-extra'
 import ps from 'xml2js'
 
+const rss = ['https://note.com/ukarisalon/rss']
+
 export default function apiBuildJson() {
-  const api = axios.create()
   const distJosonFile = './static/_nuxt/api/index.json'
   const arr = []
 
@@ -15,21 +16,26 @@ export default function apiBuildJson() {
       ? Object.values(thumbnails)
       : false
   }
-  return axios.all([api.get('https://note.com/ukarisalon/rss')]).then(
-    axios.spread((ukari) => {
-      const xml = ukari.data
+  return axios.all(rss.map((link) => axios.get(link))).then(
+    axios.spread((...responses) => {
       const json = {
         items: []
       }
-      ps.parseString(xml, (message, xmlres) => {
-        json.items = xmlres.rss.channel[0].item
-      })
-      json.items.forEach((data) => {
-        const thumb = getThumbnails(data.description[0])
-        Object.assign(data, { thumb })
-      })
+      responses.forEach((response, index) => {
+        const xml = response.data
+        ps.parseString(xml, (message, xmlres) => {
+          json.items.push(xmlres.rss.channel[0].item)
+        })
+        console.log(json.items)
+        json.items.forEach((item) => {
+          item.forEach((data) => {
+            const thumb = getThumbnails(data.description[0])
+            Object.assign(data, { thumb })
+          })
+        })
 
-      arr.push(json)
+        arr.push(json)
+      })
 
       fse.outputFile(distJosonFile, JSON.stringify(arr))
     })
