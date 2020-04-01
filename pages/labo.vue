@@ -5,13 +5,15 @@
         img(src="/img/logos/U-LABO_Logo.svg", alt="U-LABO logo")
     section.page__section
       h2.page__subtitle About U-LABO
+      h3.page__small-title 「好奇心が交差する社会実験場」
       p.page__text ULABOは高校生が運営するコミュニティースペースです。コンセプトは「好奇心が交差する社会実験場」
       p.page__text 高校生同士が互いに助け合い好奇心をぶつけ会えるコミュニティースペースを目指しています。
       p.page__text 高校生のやってみたいを高校生が共に発見し実現させていき、イベントを開き人を呼び込んでまた新しい出会いと経験を広げて仲間を増やしていける場にしたいです。学校でも家庭でもない第3のコミュニティとなり放課後の時間を高校生の輝ける環境を作っていきます。
-      h3.page__small-title 「好奇心が交差する社会実験場」
     section.page__section
-      h2.page__subtitle クラウドファンディング挑戦中
-      p 現在、U-LABOに開設に向けて、クラウドファンディングに挑戦中です！
+      h2.page__subtitle クラウドファンディング ありがとうございました
+      p.page__text U-LABO 開設に向けたクラウドファンディングが終了しました。皆様のご支援誠にありがとうございました。
+      p.page__text 200%以上のご支援をいただき、ネクストゴールまで達成することができました。
+      h3.page__small-title 主にご支援くださった方々
       a( href="https://camp-fire.jp/projects/view/240557" target="_blank" rel="noopener noreferrer").page__button 詳細はこちらから
     section.page__section
       h2.page__subtitle 利用方法・料金
@@ -28,7 +30,7 @@ export default {
   mixins: [Meta],
   data() {
     return {
-      calendarId: 'ukari.salon@gmail.com',
+      calendarId: 'b4v0e4jv19sr4v7t4i8c8thnnc@group.calendar.google.com',
       meta: {
         title: 'U-LABO',
         description:
