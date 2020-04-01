@@ -26,7 +26,6 @@ export default function apiBuildJson() {
         ps.parseString(xml, (message, xmlres) => {
           json.items.push(xmlres.rss.channel[0].item)
         })
-        console.log(json.items)
         json.items.forEach((item) => {
           item.forEach((data) => {
             const thumb = getThumbnails(data.description[0])
