@@ -1,19 +1,18 @@
 <template lang="pug">
   header.header
-    label(for="header-button").header__button
-      fa(:icon="faCaretDown" style="font-size: 20px")
-    input(type="checkbox" id="header-button").header__button__checkbox
-    nav.header__inner
+    div( :class="{'header-toggle-button--reversed': isHeaderActive}" @click="toggleHeader").header-toggle-button
+      fa(:icon="faCaretDown")
+    nav(:class="{'header__inner--active': isHeaderActive}").header__inner
       ul.header__container
-        nuxt-link(to="/").header__item.ukari 
+        nuxt-link(to="/" @click.native="toggleHeader").header__item.ukari 
           img(src="/img/logos/UKARI_LOGO.svg", alt="UKARI Logo")
-        nuxt-link(to="/salon").header__item.salon
+        nuxt-link(to="/salon" @click.native="toggleHeader").header__item.salon
           img(src="/img/logos/UKARI-SALON_LOGO.svg", alt="UKARI SALON Logo")
-        nuxt-link(to="/labo").header__item.labo
+        nuxt-link(to="/labo" @click.native="toggleHeader").header__item.labo
           img(src="/img/logos/U-LABO_LOGO.svg", alt="U-LABO Logo")
-        nuxt-link(to="/steppinup").header__item.steppinup
+        nuxt-link(to="/steppinup" @click.native="toggleHeader").header__item.steppinup
           img(src="/img/logos/SteppinUp_LOGO.svg", alt="Steppin'Up Logo")
-        nuxt-link(to="/dennoutai").header__item.dennoutai
+        nuxt-link(to="/dennoutai" @click.native="toggleHeader").header__item.dennoutai
           img(src="/img/logos/DENNOUAI_LOGO.svg", alt="DENNOUTAI Logo")
 </template>
 
@@ -21,9 +20,28 @@
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
 export default {
+  data() {
+    return {
+      isHeaderActive: false
+    }
+  },
   computed: {
     faCaretDown() {
       return faCaretDown
+    }
+  },
+  methods: {
+    toggleHeader() {
+      const html = document.getElementsByTagName('html')[0]
+      const body = document.getElementsByTagName('body')[0]
+      if (window.innerWidth <= 768) {
+        this.isHeaderActive
+          ? (this.isHeaderActive = false)
+          : (this.isHeaderActive = true)
+
+        html.classList.toggle('scroll-fixed')
+        body.classList.toggle('scroll-fixed')
+      }
     }
   }
 }
@@ -61,7 +79,7 @@ export default {
     margin-left: 2rem;
   }
 
-  input {
+  .header-toggle-button {
     display: none;
   }
 }
@@ -81,13 +99,13 @@ export default {
       width: 100%;
       height: 0;
       background: $ukari-black-color;
-      transition: 1s ease;
+      transition: all 0.5s ease;
       transform: translateY(-100vh);
-    }
 
-    &__button__checkbox:checked + &__inner {
-      height: 100vh;
-      transform: translate(0);
+      &--active {
+        height: 100vh;
+        transform: translateY(0vh);
+      }
     }
 
     &__container {
@@ -113,31 +131,18 @@ export default {
       margin-left: 0rem;
     }
 
-    &__button {
+    .header-toggle-button {
       position: absolute;
-      top: 30px;
-      right: 30px;
-      z-index: 11;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      background: $text-color;
-      border-radius: 50%;
+      top: 2rem;
+      right: 2rem;
+      z-index: 100;
+      display: block;
+      font-size: 30px;
+      color: $text-color;
+      transition: all 0.5s ease;
 
-      svg {
-        transition: 0.8s ease;
-      }
-
-      &:hover svg,
-      &:active svg,
-      &:checked svg {
-        transform: rotateZ(180deg);
-      }
-
-      &__checkbox {
-        display: none;
+      &--reversed {
+        transform: rotateZ(-180deg);
       }
     }
   }
