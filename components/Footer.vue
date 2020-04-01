@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 10% 0;
+  padding: 2rem 0;
   color: #f7b82c;
 }
 </style>
