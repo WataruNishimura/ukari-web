@@ -4,7 +4,7 @@
       h1.page__title
         img(src="/img/logos/SteppinUp_Logo.svg", alt="alt")
     section.page__section
-      p.steppinup__ready-text Now Loading...
+      p.steppinup__ready-text Coming soon...
 </template>
 
 <script>
