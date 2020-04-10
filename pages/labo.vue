@@ -14,6 +14,11 @@
       p.page__text U-LABO 開設に向けたクラウドファンディングが終了しました。皆様のご支援誠にありがとうございました。
       p.page__text 200%以上のご支援をいただき、ネクストゴールまで達成することができました。
       h3.page__small-title 主にご支援くださった方々
+      div.patron-list
+        p(
+          v-for="(patron, index) in patronList"
+          :key="index"
+        ) {{ patron }}
       a( href="https://camp-fire.jp/projects/view/240557" target="_blank" rel="noopener noreferrer").page__button 詳細はこちらから
     section.page__section
       h2.page__subtitle 利用方法・料金
@@ -42,7 +47,25 @@ export default {
         type: 'article',
         url: 'https://ukari.hokkaido.jp/labo',
         image: 'https://ukari.hokkaido.jp/img/ogp/ogp_labo.jpg'
-      }
+      },
+      patronList: [
+        '濱内 勇一',
+        'ミスターＵ',
+        'マドラー株式会社',
+        '旧野口梅吉商店-わらじ荘-',
+        '札幌大谷大学 丸山宏昌',
+        'VERTU Private Limited 前田 翔',
+        '吉田愛梨',
+        '加藤朝彦',
+        'イロドリトイロ株式会社 代表取締役 新岡 唯',
+        'EDUFES北海道',
+        'ayugraphic 代表 グラフィックレコーダー 木村あゆみ',
+        'IRENKA KOTAN LLC.',
+        '脇田唯',
+        '和田 哲',
+        '株式会社イーパブリッシャー',
+        '速水駿'
+      ]
     }
   }
 }
@@ -55,6 +78,23 @@ export default {
       color: $ukari-black-color;
       background: $labo-color;
     }
+  }
+}
+
+.patron-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+
+  p {
+    margin: 0.4rem;
+    text-align: center;
   }
 }
 
