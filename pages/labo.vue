@@ -2,7 +2,7 @@
   .page.labo
     section.page__section
       h1.page__title
-        img(src="/img/logos/U-LABO_Logo.svg", alt="U-LABO logo")
+        img(src="/img/logos/U-LABO_Logo.svg", alt="U-LABO Logo" decoding="async" loading="lazy")
     section.page__section
       h2.page__subtitle About U-LABO
       h3.page__small-title 「好奇心が交差する社会実験場」

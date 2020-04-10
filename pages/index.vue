@@ -2,7 +2,7 @@
   div.page.ukari
     section.page__section
       h1.page__title
-        img(src="/img/logos/UKARI_LOGO.svg" alt="UKRAI Logo")
+        img(src="/img/logos/UKARI_LOGO.svg" alt="UKRAI Logo" decoding="async" loading="lazy")
     section.page__section
       h2.page__subtitle About UKARI
       p.page__text UKARIは「挑戦者のベースキャンプ」を理念とし、札幌を始めとして多くの高校生によって作りだされるコミュニティです。
@@ -14,7 +14,7 @@
       p.page__text--author UKARI 創設者 種市慎太郎
     section.page__section
       h2.page__subtitle 体制図
-      img(:src="diagramImage").ukari-diagram
+      img(:src="diagramImage" alt="UKARI体制図" decoding="async" loading="lazy").ukari-diagram
     section.page__section
       h2.page__subtitle SNS
       .sns-group__container
