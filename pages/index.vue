@@ -3,6 +3,7 @@
     section.page__section
       h1.page__title
         img(src="/img/logos/UKARI_LOGO.svg" alt="UKRAI Logo" decoding="async" loading="lazy")
+      a(href="https://note.com/ukarisalon/n/n35d975b99015" target="_blank" rel="noreferrer noopener").page__text.toppage-anounce 新型コロナウイルス感染拡大ならびに緊急事態宣言を踏まえた対応について（外部リンク）
     section.page__section
       h2.page__subtitle About UKARI
       p.page__text UKARIは「挑戦者のベースキャンプ」を理念とし、札幌を始めとして多くの高校生によって作りだされるコミュニティです。
@@ -27,7 +28,6 @@
         .sns-group__box 
           h3.page__small-title note
           noteViewer(:notes="jsonData")
-
 </template>
 
 <script>
@@ -87,5 +87,13 @@ export default {
 .page-title,
 .page-subtitle {
   color: #f7b82c;
+}
+
+.toppage-anounce {
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: underline;
 }
 </style>
