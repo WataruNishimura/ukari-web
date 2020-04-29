@@ -33,6 +33,7 @@
           th 月額
           td 700円／1人
       p.fee-anounce ※利用時間や利用可能日などは変更される可能性があります。
+      n-link(to="/labo/terms").page__link 利用規約
     section.page__section
       h2.page__subtitle アクセス
       p 地下鉄南北線北12条駅 徒歩３分
