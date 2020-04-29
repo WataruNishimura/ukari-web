@@ -28,7 +28,6 @@
         .sns-group__box 
           h3.page__small-title note
           noteViewer(:notes="jsonData")
-
 </template>
 
 <script>
@@ -88,5 +87,13 @@ export default {
 .page-title,
 .page-subtitle {
   color: #f7b82c;
+}
+
+.toppage-anounce {
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: underline;
 }
 </style>

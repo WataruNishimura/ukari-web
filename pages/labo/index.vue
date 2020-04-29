@@ -22,7 +22,18 @@
       a( href="https://camp-fire.jp/projects/view/240557" target="_blank" rel="noopener noreferrer").page__button 詳細はこちらから
     section.page__section
       h2.page__subtitle 利用方法・料金
-      p 未定
+      table.fee-table
+        tr
+          th 平日 (17:30～22:30)
+          td 100円／1人
+        tr
+          th 土日祝日 (13:00～22:30)
+          td 200円／1人
+        tr
+          th 月額
+          td 700円／1人
+      p.fee-anounce ※利用時間や利用可能日などは変更される可能性があります。
+      n-link(to="/labo/terms").page__link 利用規約
     section.page__section
       h2.page__subtitle アクセス
       p 地下鉄南北線北12条駅 徒歩３分
@@ -79,6 +90,29 @@ export default {
       background: $labo-color;
     }
   }
+}
+
+.fee-table {
+  font-weight: 800;
+  border-collapse: collapse;
+
+  tr {
+    border: solid 2px;
+  }
+
+  td {
+    border: solid 2px;
+  }
+
+  th,
+  td {
+    padding: 1rem;
+    text-align: left;
+  }
+}
+
+.fee-anounce {
+  margin-top: 2rem;
 }
 
 .patron-list {
