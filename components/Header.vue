@@ -10,10 +10,6 @@
           img(src="/img/logos/UKARI-SALON_LOGO.svg", alt="UKARI SALON Logo")
         nuxt-link(to="/labo" @click.native="toggleHeader").header__item.labo
           img(src="/img/logos/U-LABO_LOGO.svg", alt="U-LABO Logo")
-        nuxt-link(to="/steppinup" @click.native="toggleHeader").header__item.steppinup
-          img(src="/img/logos/SteppinUp_LOGO.svg", alt="Steppin'Up Logo")
-        nuxt-link(to="/dennoutai" @click.native="toggleHeader").header__item.dennoutai
-          img(src="/img/logos/DENNOUAI_LOGO.svg", alt="DENNOUTAI Logo")
 </template>
 
 <script>
