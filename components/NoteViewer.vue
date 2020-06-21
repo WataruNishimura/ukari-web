@@ -11,7 +11,7 @@
         :href="post.link[0]"
         target="__blank"
       ).note-viewer__box
-        img( v-if="post.thumb[0]" :src="post.thumb[0]" :alt="post.title[0]" ).note-viewer__box__img
+        img( v-if="post.thumb[0]" :src="post.thumb[0]" :alt="post.title[0]" decoding="async" loading="lazy").note-viewer__box__img
         p.note-viewer__box__pub-date {{ getPubDate(post.pubDate[0]) }}
         p.note-viewer__box__title {{ post.title[0] }}
         p.note-viewer__box__link noteを読む

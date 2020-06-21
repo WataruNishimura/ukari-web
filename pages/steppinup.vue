@@ -2,7 +2,7 @@
   .page.steppinup
     section.page__section
       h1.page__title
-        img(src="/img/logos/SteppinUp_Logo.svg", alt="alt")
+        img(src="/img/logos/SteppinUp_Logo.svg", alt="Steppin'Up Logo" decoding="async" loading="lazy")
     section.page__section
       p.steppinup__ready-text Coming soon...
 </template>

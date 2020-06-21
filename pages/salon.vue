@@ -2,7 +2,7 @@
   div.page.ukari
     section.page__section
       h1.page__title 
-        img(src="/img/logos/UKARI-SALON_LOGO.svg" alt="UKARI SALON Logo")
+        img(src="/img/logos/UKARI-SALON_LOGO.svg" alt="UKARI SALON Logo" decoding="async" loading="lazy")
     section.page__section
       h2.page__subtitle About UKARI SALON
       p.page__text #[span.page__text--bold 「札幌では自己実現が叶わないから、いつか上京してからやりたいことをしよう。]
